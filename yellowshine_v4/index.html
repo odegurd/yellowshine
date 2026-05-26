@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yellowshine – Korean Snack Stand</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <img src="logo.png" alt="Yellowshine Logo" width="50" height="50" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="logo-fallback" style="display:none">🌟</div>
+      <span>yelloowshine</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Beranda</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#about" class="nav-link">Tentang Kami</a></li>
+      <li><a href="#contact" class="nav-link">Kontak</a></li>
+    </ul>
+    <div class="nav-auth" id="navAuth">
+      <!-- filled by JS -->
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</nav>
+
+<!-- ===== HERO / BERANDA ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg-shapes">
+    <div class="shape s1"></div><div class="shape s2"></div><div class="shape s3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">🇰🇷 Authentic Korean Snacks</div>
+      <h1 class="hero-title">Cemilan Korea <br/><span class="yellow-text">Enak & Terjangkau</span></h1>
+      <p class="hero-desc">Nikmati kelezatan jajanan Korea khas Yellowshine — homemade dengan cinta, disajikan dengan senyum! 🥰</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">🍢 Lihat Menu</a>
+        <a href="https://wa.me/6288102684235?text=Halo%20Yellowshine%2C%20saya%20mau%20pesan!" target="_blank" class="btn btn-wa">💬 Pesan Sekarang</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" id="statProducts">12+</span><span>Menu Pilihan</span></div>
+        <div class="stat"><span class="stat-num">⭐ 4.9</span><span>Rating</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span>Homemade</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-card">
+        <div class="slider-wrapper" id="heroSlider">
+          <!-- slides injected by JS from bestSeller products -->
+        </div>
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+      <div class="deco-badge top-right">🌟 Best Seller!</div>
+      <a href="#menu" class="deco-badge bottom-left deco-clickable">✨ Fresh Daily</a>
+    </div>
+  </div>
+  <div class="scroll-hint">↓ Scroll untuk Menu</div>
+</section>
+
+<!-- ===== FEATURED / UNGGULAN ===== -->
+<section class="featured-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">⭐ Favorit Pelanggan</span>
+      <h2>Produk Unggulan</h2>
+    </div>
+    <div class="featured-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- ===== MENU LENGKAP ===== -->
+<section class="menu-section" id="menu">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">🍽️ Menu Kami</span>
+      <h2>Daftar Menu Yellowshine</h2>
+      <p>Semua produk dibuat fresh setiap hari dengan bahan pilihan</p>
+    </div>
+    <div class="menu-filter" id="menuFilter">
+      <button class="filter-btn active" data-cat="all">Semua</button>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- ===== TENTANG KAMI ===== -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-card-main" id="aboutCardMain">
+          <div class="about-photo-wrap" id="aboutPhotoWrap">
+            <!-- Photo or fallback rendered by JS -->
+          </div>
+          <h3>Homemade with Love</h3>
+          <p>Dibuat langsung di dapur kami dengan penuh perhatian</p>
+        </div>
+        <div class="about-stat-cards">
+          <div class="about-mini-card">🌟 Berdiri sejak 2022</div>
+          <div class="about-mini-card">❤️ 500+ Pelanggan Puas</div>
+          <div class="about-mini-card">🇰🇷 Resep Otentik Korea</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-tag">💛 Tentang Kami</span>
+        <h2>Cerita di Balik Yellowshine</h2>
+        <p>Yellowshine lahir dari kecintaan kami terhadap kuliner Korea yang unik dan lezat. Berawal dari dapur rumahan di Jember, kami hadir untuk memanjakan lidah kamu dengan cita rasa Korea yang otentik namun tetap bersahabat di kantong.</p>
+        <p>Setiap produk kami buat dengan tangan, menggunakan bahan-bahan segar pilihan, tanpa pengawet. Kami percaya bahwa makanan yang dibuat dengan cinta akan selalu terasa lebih spesial!</p>
+        <div class="visi-misi">
+          <div class="vm-card">
+            <h4>🎯 Visi</h4>
+            <p>Menjadi stand cemilan Korea terpercaya dan terfavorit di Jember yang menghadirkan cita rasa Korea otentik untuk semua kalangan.</p>
+          </div>
+          <div class="vm-card">
+            <h4>🚀 Misi</h4>
+            <ul>
+              <li>Menyajikan produk fresh berkualitas setiap hari</li>
+              <li>Memberikan pelayanan ramah dan cepat</li>
+              <li>Menjaga harga tetap terjangkau</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEW SECTION ===== -->
+<section class="review-section" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">💬 Ulasan Pelanggan</span>
+      <h2>Apa Kata Mereka?</h2>
+    </div>
+    <div class="review-grid" id="reviewGrid"></div>
+    <div class="review-form-wrapper" id="reviewFormWrapper">
+      <!-- shown only when user logged in, rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== KONTAK ===== -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">📞 Hubungi Kami</span>
+      <h2>Kontak Yellowshine</h2>
+    </div>
+    <div class="contact-grid">
+      <a href="https://wa.me/6288102684235?text=Halo%20Yellowshine!" target="_blank" class="contact-card wa-card">
+        <div class="contact-icon">💬</div><h3>WhatsApp</h3>
+        <p>0881-0268-4235</p><span class="contact-cta">Chat Sekarang →</span>
+      </a>
+      <a href="https://instagram.com/yelloowshine_" target="_blank" class="contact-card ig-card">
+        <div class="contact-icon">📸</div><h3>Instagram</h3>
+        <p>@yelloowshine_</p><span class="contact-cta">Follow Kami →</span>
+      </a>
+      <div class="contact-card loc-card">
+        <div class="contact-icon">📍</div><h3>Lokasi</h3>
+        <p>Jember, Jawa Timur</p><span class="contact-cta">Open Order via WA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">🌟 yelloowshine</span>
+      <p>Korean Snack Homemade • Jember</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Beranda</a><a href="#menu">Menu</a>
+      <a href="#about">Tentang</a><a href="#contact">Kontak</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Yellowshine. Made with 💛 in Jember</p>
+      <button class="admin-access-btn visually-hidden" id="adminAccessBtn" tabindex="-1" aria-hidden="true">⚙️</button>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODAL: USER LOGIN ===== -->
+<div class="modal-overlay" id="loginModal" style="display:none">
+  <div class="modal-box">
+    <button class="modal-close" id="closeLoginModal">✕</button>
+    <div class="modal-logo-wrap"><img src="logo.png" width="60" height="60" alt="logo" onerror="this.style.display='none'"/></div>
+    <h3>👋 Masuk ke Yellowshine</h3>
+    <p class="modal-sub">Masuk untuk bisa kasih ulasan!</p>
+    <input type="text" id="loginUser" placeholder="Username atau Email" class="modal-input"/>
+    <input type="password" id="loginPass" placeholder="Password" class="modal-input"/>
+    <div class="modal-err" id="loginErr"></div>
+    <button class="btn btn-primary btn-full" id="loginBtn">Masuk</button>
+    <p class="modal-switch">Belum punya akun? <a href="#" id="switchToRegister">Daftar sekarang</a></p>
+  </div>
+</div>
+
+<!-- ===== MODAL: USER REGISTER ===== -->
+<div class="modal-overlay" id="registerModal" style="display:none">
+  <div class="modal-box">
+    <button class="modal-close" id="closeRegisterModal">✕</button>
+    <div class="modal-logo-wrap"><img src="logo.png" width="60" height="60" alt="logo" onerror="this.style.display='none'"/></div>
+    <h3>🌟 Daftar Akun Baru</h3>
+    <p class="modal-sub">Gratis! Biar bisa kasih review 💛</p>
+    <input type="text" id="regUsername" placeholder="Username" class="modal-input"/>
+    <input type="email" id="regEmail" placeholder="Email" class="modal-input"/>
+    <input type="password" id="regPass" placeholder="Password" class="modal-input"/>
+    <input type="password" id="regPassConfirm" placeholder="Konfirmasi Password" class="modal-input"/>
+    <div class="modal-err" id="registerErr"></div>
+    <button class="btn btn-primary btn-full" id="registerBtn">Daftar</button>
+    <p class="modal-switch">Sudah punya akun? <a href="#" id="switchToLogin">Masuk di sini</a></p>
+  </div>
+</div>
+
+<!-- ===== MODAL: ADMIN LOGIN (HIDDEN) ===== -->
+<div class="modal-overlay" id="adminLoginModal" style="display:none">
+  <div class="modal-box admin-login-box">
+    <button class="modal-close" id="closeAdminLoginModal">✕</button>
+    <div class="admin-login-header">
+      <div class="admin-lock-icon">🔐</div>
+      <h3>Admin Login</h3>
+      <p>Akses khusus pengelola Yellowshine</p>
+    </div>
+    <input type="text" id="adminUser" placeholder="Username Admin" class="modal-input"/>
+    <input type="password" id="adminPass" placeholder="Password" class="modal-input"/>
+    <div class="modal-err" id="adminLoginErr"></div>
+    <button class="btn btn-primary btn-full" id="adminLoginBtn">Masuk sebagai Admin</button>
+    <p class="modal-hint">Tekan <kbd>Ctrl+Shift+A</kbd> untuk membuka panel ini</p>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- Floating WA -->
+<a href="https://wa.me/6288102684235?text=Halo%20Yellowshine!" target="_blank" class="wa-float-btn">💬</a>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
